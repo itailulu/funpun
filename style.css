@@ -1,0 +1,35 @@
+.riddle {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  margin: 30px;
+  font-size: 1.5em;
+  position: relative;
+}
+.riddle-answer {
+  text-align: right;
+  direction:rtl;
+  background-color: whitesmoke;
+  padding: 50px;
+}
+
+.riddle-question {
+  padding: 50px;
+}
+
+.category-wrapper {
+  position: absolute;
+  top: 0;
+  padding: 0px 12px;
+  right: 0;
+  color: white;
+  background: silver;
+  font-size: 0.75em;
+}
+
+.categories-checkboxes {
+  display: block-inline;
+}
+
+.form-check-inline .form-check-input {
+  margin-left: 0.3125rem;
+}
