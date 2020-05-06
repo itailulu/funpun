@@ -2,75 +2,112 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164586817-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164586817-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-164586817-1');
   </script>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>👅 Tongue Falls on Tounge 👅</title>
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/drive-db"></script>
-  <link rel="stylesheet" href="style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>👅 Tongue Falls on Tounge 👅</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/drive-db"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col py-5">
-        <div id="app">
-          <div class="container">
-            <h1 class="text-center">👅 Tongue Falls on Tounge 👅</h1>
-            <div class="row">
-              <div class="col text-right">
-                <div class="form-check form-check-inline" v-for="category in categories">
-                  <label class="form-check-label" for="defaultCheck1">{{category.title}}</label>
-                  <input class="form-check-input" type="checkbox" v-bind:value="category.title" id="defaultCheck1" v-model="selectedCategories">
-                </div>
-              </div>
-            </div>
-            <div class="row riddle" v-for="riddle in filteredRiddles">
-              <div class="col-sm-12 col-md-6 riddle-question">
-                {{ riddle.question }}
-              </div>
-              <div class="col-sm-12 col-md-6 riddle-answer">
-                <a href="javascript:void(0);" v-show="!riddle.seen" v-on:click="riddle.seen = true" class="badge badge-primary">הצג תשובה</a>
-                <span v-show="riddle.seen">{{ riddle.answer }}</span>
-              </div>
-              <div class="category-wrapper">
-                <span>{{riddle.category}}</span>
-              </div>
-            </div>
-          </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light" id="hero">
+        <div class="col-md-5 mx-auto text-center">
+            <h1 class="display-4 font-weight-normal header">👅 לשון נופל על לשון 👅</h1>
+            <p class="lead font-weight-normal mt-4">חידון משעשע, פרוע ומאתגר בו צריך לזהות את התרגום המילולי של פתגם או מושג מסויים - מה שיותר מגוחך, הרי זה משובח</p>
+            <p class="lead font-weight-normal">לדוגמא: System House - בית השיטה</p>
+            <p class="text-muted credits">השקיעו מחשבה: <a class="text-info" href="https://www.nikolevymusic.net/"> ניקו לוי</a> ו<a class="text-info" href="https://www.dudukoren.com/">דודו קורן</a>
+                <br>תמך נפשית וטכנית: איתי קורן</p>
+                <p class="">
+            <a class="collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <span class="open-button">אז מה הסיפור בעצם?</span>
+              <span class="close-button">לא משנה, דלג למשחק</span>
+            </a>
+        </p>
         </div>
-      </div>
+        <div id="about" class="text-right">
+        
+        <div class="collapse container" id="collapseExample">
+            <div class="card card-body">
+                  <blockquote class="blockquote text-muted">
+  <p class="mb-0">לשון נופל על לשון הוא צירוף לשוני שבו ישנן שתי מילים בעלות הגייה דומה אך משמעותן שונה ולעיתים אף סותרת.<br> צירופים אלו נועדו לשחק עם הלשון וליצור בלבול מסוים אצל הקורא, שכן משמעותן של המילים היא שונה</p>
+</blockquote>
+   <p>
+עד כאן ההגדרה המקובלת.</p><p>
+אנחנו <strong>לקחנו את המושג לכיוון אחר</strong>, פרוע ומאתגר, והחלטנו להפוך את מה שהחל בתור בדיחות פרטיות בחוג מצומצם, לחידון משעשע.<br>
+<strong>הרעיון הוא לתרגם לאנגלית</strong> שם של אישיות מפורסמת, ביטוי, שם מקום וכו' <strong>בצורה מילולית ככל האפשר</strong> עד כדי הגחכה – <strong>ומה שיותר מגוחך, הרי זה משובח.</strong></p>
+
+<p>הרעיון הראשון היה System house שהוא כמובן (קיבוץ) בית השיטה, ומאז המעיין ממשיך לזרום עם שתי עקרונות מנחים:</p>
+<ul>
+<li>אין הקפדה על כללי הכתיב (חי"ת/כ"ף, אל"ף/עי"ן) אלא על הצלצול של המילה</li>
+<li>החידה מוצלחת יותר ככל שהמשמעות האמיתית שלה רחוקה מהמשמעות שאנו רוצים לקבל</li>
+</ul>
+<p>מקווים שתהנו, ובהצלחה!</p>
+        </div>
+        
+             
+            </div>
+        </div>
     </div>
-  </div>
-  <!-- Footer -->
-  <footer class="page-footer font-small bg-secondary text-light">
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Credits:
-      <a class="text-light" href="https://www.nikolevymusic.net/"> Niko Levy</a> & <a class="text-light" href="https://www.dudukoren.com/">Dudu Koren</a>, Developed by Itailulu
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col py-5">
+                <div id="app">
+                    <div class="container">
+                        <h1 class="text-center"></h1>
+                        <div class="row">
+                            <div class="col text-right">
+                                <div class="form-check form-check-inline" v-for="category in categories">
+                                    <label class="form-check-label" for="defaultCheck1">{{category.title}}</label>
+                                    <input class="form-check-input" type="checkbox" v-bind:value="category.title" id="defaultCheck1" v-model="selectedCategories">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row riddle" v-for="riddle in filteredRiddles">
+                            <div class="col-sm-12 col-md-6 riddle-question">
+                                {{ riddle.question }}
+                            </div>
+                            <div class="col-sm-12 col-md-6 riddle-answer">
+                                <a href="javascript:void(0);" v-show="!riddle.seen" v-on:click="riddle.seen = true" class="badge badge-primary">הצג תשובה</a>
+                                <span v-show="riddle.seen">{{ riddle.answer }}</span>
+                            </div>
+                            <div class="category-wrapper">
+                                <span>{{riddle.category}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-  <script src="index.js" type="text/javascript"></script>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-secondary text-light">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Credits:
+            <a class="text-light" href="https://www.nikolevymusic.net/"> Niko Levy</a> & <a class="text-light" href="https://www.dudukoren.com/">Dudu Koren</a>, Developed by Itailulu
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script src="index.js" type="text/javascript"></script>
 </body>
 
 </html>

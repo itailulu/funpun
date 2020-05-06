@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@400;700&display=swap');
+
+/*
+font-family: 'Rubik', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+.badge {
+  font-weight: 400;
+}
+
 .riddle {
   border: 2px solid lightgray;
   border-radius: 5px;
@@ -14,6 +29,7 @@
 
 .riddle-question {
   padding: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .category-wrapper {
@@ -32,4 +48,26 @@
 
 .form-check-inline .form-check-input {
   margin-left: 0.3125rem;
+}
+
+#hero {
+  direction: rtl;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .riddle, .riddle-answer {
+    text-align: center;
+  }
+}
+
+.collapsed .close-button {
+  display:none;
+}
+
+a:not(.collapsed) .open-button {
+  display:none;
 }
